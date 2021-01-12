@@ -7,7 +7,6 @@ pub struct CertString {
 #[derive(Deserialize, Debug)]
 pub struct Data {
     pub leaf_cert: LeafCert,
-    pub chain: Vec<ChainObjects>,
 }
 
 #[derive(Deserialize, Debug)]

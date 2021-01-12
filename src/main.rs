@@ -42,8 +42,7 @@ impl EventHandler for WebSocketHandler {
                 let cert: CertString = message;
                 if cert.message_type.contains("certificate_update") {
                     for domain in cert.data.leaf_cert.all_domains {
-                        self.nettfiske
-                            .analyse_domain(&domain, cert.data.chain.clone());
+                        self.nettfiske.analyse_domain(&domain);
                     }
                 }
             }
